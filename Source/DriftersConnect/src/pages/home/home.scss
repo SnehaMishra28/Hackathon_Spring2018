@@ -1,0 +1,172 @@
+page-home {
+      ion-content {
+    background: url(../assets/imgs/city.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+    .item-md, .item-ios {
+      background: none;
+    }
+  }
+    
+  .homeCenter {
+      width: 100%;
+    height: fill-content;
+    padding: 2px 2px 25px 2px;
+    min-width: 100%;
+      min-height: 80%;
+    margin: 50x auto;
+    border-radius: 20px;
+      opacity:0.9;
+    background: #101010;
+          
+  }
+    
+    .container {
+  display: flex;
+        border-radius: 20px;
+        border-style: groove;
+        border-color: white;
+        border-width: thin;
+}
+.container > div {
+  flex: 1; /*grow*/
+}
+
+  h3 {
+        text-align:center;
+    margin: 15px 5px 5px 20px;
+    padding: 5px 0px 0px 0px;
+      color: white;
+      font-size: 30px;
+  }
+      h4 {
+        text-align:left;
+    margin: 15px 5px 5px 20px;
+    padding: 5px 0px 0px 0px;
+      color: white;
+      font-size: auto;
+  }
+
+  .spacer {
+    margin: 2px auto;
+    width: auto;
+  }
+    .input-wrapper {
+        color: white
+    }
+
+  .listItem {
+    margin: 10px 20px;
+      color: white;
+  }
+
+  .inputData, .inputLabel {
+      padding: 2px;
+    margin: 5px auto;
+    width: 80%;
+    height: auto;
+      font-weight: 400;
+      font-size: 25px;
+      border-radius: 20px;
+      
+  }
+        .inputLabel {
+        color: white;
+    }
+    
+     .inputData {
+    border-bottom: #FFFFFF solid 2px;
+      font-weight: 400;
+      background-color: white;
+      opacity: 1;
+           }
+
+  .postData {
+    width: 80%;
+    margin-left: 5px;
+  }
+    
+    .ion-item {
+        color: white;
+    }
+    
+   .inputLabel {
+        color: white;
+    }
+
+  .inputItem {
+    padding: 2px;
+    margin: 10px 20px;
+    width: 250px;
+    height: auto;
+    float: left;
+  }
+
+  .inputData {
+    border-bottom: #222222 solid 1px;
+  }
+    
+
+  .inputButton {
+    padding: 2px;
+    height: auto;
+    margin: 5px;
+      border-radius: 20px;
+    display: inline-block;
+      font-size: auto
+  }
+  .inputCenter {
+    margin: 5px auto;
+    width: fit-content;
+    align-items: center;
+  }
+
+  .text-input-md {
+    margin: 5px 5px;
+  }
+
+  .logoutButton {
+    float:right;
+    margin: 5px 10px;
+  }
+    
+    .mapcontainer {
+        width: 90%;
+        height: 300px;
+        margin: 10px auto;
+    }
+
+
+  /*#right-panel {
+            font-family: 'Roboto','sans-serif';
+            line-height: 30px;
+            padding-left: 10px;
+        } */
+
+  /* #right-panel select, #right-panel input {
+       font-size: 15px;
+   }
+
+   #right-panel select {
+       width: 100%;
+   }
+
+   #right-panel i {
+       font-size: 12px;
+   } */
+
+  #map {
+    height: 50%;
+      width: 80%;
+  }
+  /* #right-panel {
+       float: right;
+       width: 48%;
+       padding-left: 2%;
+   } */
+  #output {
+    font-size: 11px;
+      color: white;
+  }
+}

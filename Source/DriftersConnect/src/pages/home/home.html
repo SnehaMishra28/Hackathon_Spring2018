@@ -1,0 +1,115 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="homeCenter">
+    <div class="conatiner">
+        <div class="spacer">
+        <h1 style="color: white;position: relative; top: 10px;">Dear {{user}}, welcome to Community Nexus!!
+            <button style="float: right; position: relative; top: 5px; right: 10px;" ion-button color="tertiary" (click)="logout()">Logout</button>
+            </h1>
+        </div>
+
+   <!-- <div class="spacer">
+      <div class="logoutButton" style="align-self: flex-start">
+        <button ion-button color="tertiary" (click)="logout()">Logout</button>
+      </div>
+    </div>  -->
+    </div>
+      <br> <br>
+      <div id="output"></div>
+<div class ="container">
+    <div class="spacer" style="width: 22%">
+      <div class="listItem">
+        <h4>Alarms:</h4>
+        <div class="abc" *ngIf="showA" style="color: white">
+          <ion-item *ngFor="let alarmItem of alarms">
+            {{alarmItem}}
+          </ion-item>
+        </div>
+      </div>
+      <div class="inputButton">
+        <button ion-button color="secondary" (click)="showA = !showA">Show/Hide</button>
+      </div>
+    </div>
+      
+    <div class="spacer" style="width: 22%">
+          <div class="listItem">
+        <h4>News:</h4>
+        <div *ngIf="showN">
+          <ion-item *ngFor="let newsItem of news">
+            {{newsItem}}
+          </ion-item>
+        </div>
+      </div>
+      <div class="inputButton">
+        <button ion-button color="secondary" (click)="showN = !showN">Show/Hide</button>
+      </div>
+    </div>
+      
+    <div class="spacer" style="width: 22%">
+      <div class="listItem">
+        <h4>Requests:</h4>
+        <div *ngIf="showR">
+          <ion-item *ngFor="let requestItem of requests">
+            {{requestItem}}
+          </ion-item>
+        </div>
+      </div>
+      <div class="inputButton">
+        <button ion-button color="secondary" (click)="showR = !showR">Show/Hide</button>
+      </div>
+    </div>
+    </div>
+      <br>
+      <div class="container">
+    <div class="spacer">
+      <ion-label class="inputLabel" style="margin-left: 0px"><h4 style="float: left">Post:</h4></ion-label>
+      <ion-input class="inputData postData" type="text" placeholder="Post Message" [(ngModel)]="pMess"></ion-input>
+      <div class="inputCenter">
+        <ion-item class="inputItem">
+          <ion-label>Post Type:</ion-label>
+          <ion-select [(ngModel)]="postType">
+            <ion-option value="mess">Message</ion-option>
+            <ion-option value="requ">Request</ion-option>
+            <ion-option value="alar">Alarm</ion-option>
+          </ion-select>
+        </ion-item>
+        <div class="inputButton">
+          <button ion-button color="secondary" (click)="postMess()">Post Message</button>
+        </div>
+      </div>
+          </div>
+    </div>
+
+
+    <!-- disaply maps -->
+
+      <div class="mapcontainer" >
+
+
+     <div style="height:600px; width:100%; position: absolute">
+<div #map id="map"></div>
+
+
+ </div>
+     </div>
+
+    <!-- chat app -->
+
+     <form (ngSubmit)="enterNickname()">
+    <ion-list>
+      <ion-item>
+        <ion-input type="text" [(ngModel)]="data.nickname" name="nickname" required=""></ion-input>
+      </ion-item>
+      <ion-item>
+        <button ion-button full round color="secondary" type="submit">Enter the Community Chat</button>
+      </ion-item>
+    </ion-list>
+  </form>
+  </div>
+
+</ion-content>
